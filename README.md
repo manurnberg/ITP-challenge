@@ -132,7 +132,7 @@ Devuelve compañías con transferencias el último mes.
 
 ### SWAGGER
 Swagger UI para probar los endpoints de la api desde cliente http.
-[http://localhost:3000/api-docs]
+[http://localhost:3000/api-docs](http://localhost:3000/api-docs)
 
 ---
 
