@@ -12,6 +12,11 @@ import {
 } from 'src/infraestructure/http-server/api/controllers/interfaces/company.interface';
 import { CompanyType } from 'src/core/domain/value-objects/company-type.vo';
 
+/**
+ * Use case to fetch companies registered in the last month.
+ *
+ * @returns {Promise} Resolves with a list of companies including id, name, type, and registration date.
+ */
 @Injectable()
 export class FindCompaniesRegisterUseCase {
   constructor(

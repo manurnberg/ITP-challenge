@@ -121,6 +121,7 @@ Registra una nueva compañía.
   "name": "ACME Corp",
   "type": "SMALL"
 }
+
 ```
 
 ### GET `/companies/registered-last-month`
@@ -129,6 +130,7 @@ Devuelve compañías registradas el último mes.
 
 ### GET `/companies/with-transfers-last-month`
 Devuelve compañías con transferencias el último mes.
+
 
 ### SWAGGER
 Swagger UI para probar los endpoints de la api desde cliente http.

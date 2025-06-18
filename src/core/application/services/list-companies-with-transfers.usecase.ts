@@ -1,4 +1,8 @@
-import { Inject, InternalServerErrorException } from '@nestjs/common';
+import {
+  Inject,
+  Injectable,
+  InternalServerErrorException,
+} from '@nestjs/common';
 import { CompaniesResponseDto } from 'src/infraestructure/http-server/api/dtos/companies-response.dto';
 import { CompanyRepositoryToken } from 'src/core/domain/constants/company.repository.token';
 import { CompanyRepository } from 'src/core/domain/ports/company.repository';
@@ -8,6 +12,12 @@ import {
 } from 'src/infraestructure/http-server/api/controllers/interfaces/company.interface';
 import { GlobalLogger } from 'src/shared/logger/service/global-logger.service';
 
+/**
+ * Use case to find companies with transfers in the last month.
+ *
+ * @returns {Promise} Resolves with a list of companies including id and name.
+ */
+@Injectable()
 export class FindCompaniesWithRecentTransfersUseCase {
   constructor(
     @Inject(CompanyRepositoryToken)
